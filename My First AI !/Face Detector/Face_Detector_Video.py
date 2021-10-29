@@ -4,7 +4,7 @@ import cv2
 # For random square colors:
 from random import randrange
 
-# 3. Load some pre-trained data on face frontals opencv (haar cascade algorithm) << Downloded from Github>>.
+# 3. Load some pre-trained data on face frontals opencv (haar cascade algorithm) << Downloaded from Github>>.
 trained_face_data = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
 # CascadeClassifier is a funtion to be a classifier (Classify or Detect a Face).
 
@@ -26,7 +26,7 @@ while True:
     # b) cv2.COLOR_BGR2RGB: Blue scale.
     # c) cv2.COLOR_RGB2HSV: So much color scale.
 
-    # 5.2. Detect Faces:   << Using the pre-trained data imported to detect multiscale from the gay-scaled video >>.
+    # 5.2. Detect Faces:   << Using the pre-trained data imported to detect multiscale from the gray-scaled video >>.
     face_coordinates = trained_face_data.detectMultiScale(grayscaled_img)
     # detectMultiScale detects objects of different sizes in the video. The detected objects are returned as a list of rectangles.
 
