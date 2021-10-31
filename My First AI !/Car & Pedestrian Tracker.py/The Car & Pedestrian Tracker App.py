@@ -8,7 +8,7 @@ trained_car_file = 'D:\Escritorio\Programming\My First AI !\Car & Pedestrian Tra
 car_tracker = cv2.CascadeClassifier(trained_car_file )
 
 # 3. Import a image of a car.
-img_file = 'D:\Escritorio\Programming\My First AI !\Car & Pedestrian Tracker.py\Car_1.jpg'
+img_file = 'D:\Escritorio\Programming\My First AI !\Car & Pedestrian Tracker.py\C1.jpg'
 
 # 3.1. Create a OpenCV image (So it can work with it) << It reads all the pixels data of the image file as a multidimentional array >>:
 img = cv2.imread(img_file)
@@ -20,13 +20,18 @@ grayscaled_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cars = car_tracker.detectMultiScale(grayscaled_image)
 
 print(cars)
+# This prints the location of the car with square/rectangle coordinates.
 
-# . Display the image:
-cv2.imshow('Image Car Detector', grayscaled_image)
+# 6.  Draw rectangles around the cars:
+for (x, y, w, h) in cars:
+    cv2.rectangle(img, (x, y), (x+w, y+h), (0,0,255), 3)
+    
+
+# 7. Display the image:
+cv2.imshow('Image Car Detector', img)
 
 # Don't autoclose (Wait for a key press)
 cv2.waitKey()
 
 
 print('Code Completed')
-
