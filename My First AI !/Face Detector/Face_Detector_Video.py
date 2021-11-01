@@ -43,16 +43,18 @@ while True:
 
     # 5.4. To display the video with the faces:
     cv2.imshow('Amazing Face Detector Made By Me', frame)
-    cv2.waitKey(1)
+    key = cv2.waitKey(1)
     # The waitKey() command: When you press any key, the image will quit. 
     # With the number 1 it will wait for that amount of miliseconds to automaticly hit the key for yourself, so it won't look freezed.
 
 
 
     # Stop if Q key is pressed
-    #if key==81 or key==113:
+    if key==81 or key==113:
     # key==81>>Q and key==113>>q
-        #break
+        break
 
 # Release the VideoCapture object
-##webcam.release()
+webcam.release()
+
+print('Code Completed')
