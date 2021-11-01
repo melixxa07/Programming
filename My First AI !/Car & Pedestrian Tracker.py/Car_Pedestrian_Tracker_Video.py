@@ -10,8 +10,8 @@ trained_pedestrian_file = 'D:\Escritorio\Programming\My First AI !\Car & Pedestr
 pedestrian_tracker = cv2.CascadeClassifier(trained_pedestrian_file)
 
 # 3. Import a video of cars.
-video = cv2.VideoCapture('D:\Escritorio\Programming\My First AI !\Car & Pedestrian Tracker.py\Car_Video.mp4')
-# TODO: Try Switzerland video
+video = cv2.VideoCapture('D:\Escritorio\Programming\My First AI !\Car & Pedestrian Tracker.py\Switzerland_Driving_.mp4')
+# TODO: Try the Switzerland video
 
 if (video.isOpened() == False):
 	print("Error opening the video file")
@@ -58,5 +58,5 @@ while True:
 # Release the VideoCapture object.
 video.release()
 
-print('Code Completed')
+print('Code Completed!')
 
