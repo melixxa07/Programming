@@ -35,7 +35,8 @@ for (x, y, w, h) in face_coordinates:
 # c. (0,255,0): Green 
 # d. (0,0,255): Red
 # e. ...Explore...
-# f. To make a random color for each person: (randrange(128),randrange(128),randrange(128))  << Color can change between a range of numbers >>
+# f. (0,0,0): Black
+# g. To make a random color for each person: (randrange(128),randrange(128),randrange(128))  << Color can change between a range of numbers >>
 
 # 7. To display the image with the faces:
 cv2.imshow('Amazing Face Detector', img)
