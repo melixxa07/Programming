@@ -20,9 +20,9 @@ if (video.isOpened() == False):
 while True:
 
     # 3.1. Read the current frame:
-    read_succesful, frame = video.read()
+    read_successful, frame = video.read()
 
-    if read_succesful:    # Safe coding.
+    if read_successful:    # Safe coding.
     # 4. Must convert to grayscale.
         grayscaled_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     else:
